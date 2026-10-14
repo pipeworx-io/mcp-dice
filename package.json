@@ -1,0 +1,32 @@
+{
+  "name": "@pipeworx/mcp-dice",
+  "version": "0.1.0",
+  "description": "DICE MCP — live event + venue listings from dice.fm, the event-ticketing platform (gigs, club nights, comedy, theatre, talks).",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "bin": {
+    "mcp-dice": "bin/cli.js"
+  },
+  "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "dice"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pipeworx-io/mcp-dice.git"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "tsx": "^4.19.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "@cloudflare/workers-types": "^4.20260405.1"
+  },
+  "pipeworx": {
+    "sourceHash": "v1-6b2dac8a4f7c4b75ff4f475de8a36118c02d89477e2acd982fecdcdf5c3ff49f",
+    "sourceCommit": "4f465027cf3de54acf4976d8118ae3423a8ec9fa"
+  }
+}
