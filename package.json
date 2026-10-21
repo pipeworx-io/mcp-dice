@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-dice",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "DICE MCP — live event + venue listings from dice.fm, the event-ticketing platform (gigs, club nights, comedy, theatre, talks).",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-6b2dac8a4f7c4b75ff4f475de8a36118c02d89477e2acd982fecdcdf5c3ff49f",
-    "sourceCommit": "4f465027cf3de54acf4976d8118ae3423a8ec9fa"
+    "sourceHash": "v1-abc5b591f85f9efda2179288ea6d22bbec8e404c6a33cd38f1a6cb9b2feda389",
+    "sourceCommit": "5749f83c0ea115fab4c0c0ef04b66b05f2507d67"
   }
 }
