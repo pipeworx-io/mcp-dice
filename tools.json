@@ -1,0 +1,51 @@
+[
+  {
+    "name": "dice_cities",
+    "description": "List cities DICE (dice.fm) sells event tickets in, worldwide. Optionally filter by name/country substring. Each city's `id` + `perm_name` is what dice_browse needs. Use this first to resolve a city name to a browse id.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "Optional substring to filter by city name, perm_name, or country name (case-insensitive), e.g. \"york\", \"united kingdom\"."
+        }
+      }
+    }
+  },
+  {
+    "name": "dice_browse",
+    "description": "Live events on sale in one city on DICE (dice.fm), optionally filtered by category (e.g. \"DJ\", \"Gigs\", \"Comedy\", \"Theatre\"). Returns event name, status (on-sale/sold-out/etc), dates, venue, and starting price. Pass a city name or perm_name — it is resolved via dice_cities internally.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string",
+          "description": "City name or perm_name, e.g. \"New York\", \"new_york\", \"London\"."
+        },
+        "category": {
+          "type": "string",
+          "description": "Optional category name or id to filter by, e.g. \"DJ\", \"Comedy\", \"music:dj\". Matched case-insensitively against DICE's own filter list."
+        }
+      },
+      "required": [
+        "city"
+      ]
+    }
+  },
+  {
+    "name": "dice_event",
+    "description": "Full detail for one DICE event: description, venue + address, dates, starting price, billed lineup (artist names), and age/content highlights. Needs the event id from dice_browse.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "event_id": {
+          "type": "string",
+          "description": "DICE event id, from dice_browse's `id` field, e.g. \"6ac3bcdb7577c3000123e527\"."
+        }
+      },
+      "required": [
+        "event_id"
+      ]
+    }
+  }
+]
